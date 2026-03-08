@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orbit Social | Feed</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Rajdhani:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="ChatBot.css">
+</head>
+
+<body>
+    <canvas id="starfield"></canvas>
+
+    <header
+        style="position:fixed; top:0; width:100%; padding: 20px; background: rgba(5,5,16,0.9); border-bottom: 1px solid rgba(255,255,255,0.1); z-index: 10; display:flex; justify-content:center;">
+        <div class="logo">Chat <span class="highlight">Bot</span></div>
+    </header>
+
+    <div class="social-container">
+
+        <div class="compose-box">
+            <textarea id="postInput" class="compose-textarea" placeholder="Broadcast your signal..."></textarea>
+            <div class="compose-actions">
+                <button class="post-btn" onclick="createPost()">Transmit</button>
+            </div>
+        </div>
+
+        <div class="feed-stream" id="feed">
+
+            <div class="post-card" style="border-color: var(--secondary-color);">
+                <div class="post-header">
+                    <div class="avatar"><i class="fas fa-robot"></i></div>
+                    <div class="user-info">
+                        <h4>System Admin</h4>
+                        <span>@root • Pinned</span>
+                    </div>
+                </div>
+                <div class="post-content">
+                    Welcome to the Chat Bot stream! Type your message above to broadcast to the network. Keep it clean
+                    and follow the intergalactic directives. 🚀
+                </div>
+                <div class="post-actions">
+                    <div class="action liked"><i class="fas fa-heart"></i> 999+</div>
+                    <div class="action"><i class="far fa-comment"></i> Official</div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <a href="index.html" class="back-btn"><i class="fas fa-power-off"></i> Exit Simulation</a>
+
+
+    <script src="ChatBot.js"></script>
+</body>
+
+</html>
